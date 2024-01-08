@@ -12,3 +12,22 @@ body {
     padding: 30px;
 }
 
+.search-form-input {
+    background: white;
+    border-radius: 6px;
+    width: 80%;
+    padding: 15px;
+    font-size: 16px;;
+    border-color: white;
+    border: none;
+}
+
+.search-form-button {
+    background-color: rgb(30, 30, 231);
+    color: whitesmoke;
+    padding: 15px 20px;
+    margin-left: 5px;
+    border-radius: 6px;
+    border:none;
+    
+}
