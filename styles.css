@@ -38,4 +38,30 @@ body {
 a {
     color: #1e1ee7;
 }
+.weather-app-icon{
+    display: flex;
+    justify-content: space-around;
+    font-size: 50px;
+    margin-right: 50px;
 
+
+}
+main {
+    padding: 30px  0;
+}
+
+.weather-app-data {
+    display: flex;
+    justify-content: space-between;
+}
+.weather-app-data strong {
+    color: #f65282;
+}
+
+footer {
+    color: rgba(0 0 0 0,1);
+    font-size: 14 x;
+    border-top: 1px solid #f9f7fe;
+    padding 30, 0 0 0;
+    text-align: center;
+}
