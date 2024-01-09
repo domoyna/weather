@@ -66,20 +66,3 @@ footer {
     text-align: center;
 
 }
-img {
-    margin: 0;
-        padding: 0;
-        background-image: url('background-image.jpg');
-       
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh;
-       
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        
-        font-size: 24px;
-}
