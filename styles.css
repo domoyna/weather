@@ -66,10 +66,7 @@ footer {
     text-align: center;
 
 }
-h1 {
-    font-size: 50px;
-    font-family: 'Great Vibes';
-}
+
 .data {
     font-size: 88px;
     margin-left: 10px;
@@ -85,4 +82,8 @@ h1 {
 
 .emoji {
     magin-top: 60px;
+}
+.weather-app-city {
+    font-size: 50px;
+
 }
