@@ -82,6 +82,7 @@ footer {
 
 .emoji {
     magin-top: 60px;
+    font-size:medium;
 }
 .weather-app-city {
     font-size: 80px;
