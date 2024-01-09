@@ -41,8 +41,8 @@ a {
 .weather-app-icon{
     display: flex;
     justify-content: space-around;
-    font-size: 50px;
-    margin-right: 50px;
+    
+    margin-right: 40px;
 
 
 }
@@ -68,7 +68,7 @@ footer {
 }
 
 .data {
-    font-size: 60px;
+    font-size: 50px;
     margin-left: 10px;
     font-weight: bold;
 
@@ -77,6 +77,7 @@ footer {
 .unit {
     margin-top: 16px;
     font-size: 28px;
+    
 }
 
 
@@ -86,6 +87,4 @@ footer {
 }
 .weather-app-city {
     font-size: 80px;
-
-
 }
