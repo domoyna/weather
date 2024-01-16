@@ -1,22 +1,23 @@
-function refreshWeather(response) {
-let temperatureElement = document.querySelector("#temperature");
+function updateWeather(response) {
+     console.log(response.data);
+ let temperatureElement = document.querySelector("#current-temperature");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  let cityElement = document.querySelector("#current-city");
+  cityElement.innerHTML = response.data.name;
 let temperature = response.data.temperature.current;
- let cityElement = document.querySelector("#city");
  let descriptionElement = document.querySelector("#description");
  let humidityElement = document.querySelector("#humidity");
  let windSpeedElement = document.querySelector("#wind-speed");
-
 descriptionElement.innerHTML=response.data.condition.description ;
 humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
 windSpeedElement.innerHTML = `${response.data.wind.speed}km/h';
-cityElement.innerHTML = response.data.city;
-temperatureElement.innerHTML = Math.round(temperature);
 }
 
 function searchCity(city) {
-let apiKey = "5bd9to1c7af4e6e64c1939040db1b36a";
-let apiUrl =  `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
-axios.get(apiUrl).then(refreshWeather);
+  let apiKey = "515c9ddbeb3cda9061acfab71031839e";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(updateWeather);
 }
  
 function handleSearchSubmit (event) {
@@ -29,3 +30,8 @@ function handleSearchSubmit (event) {
     let searchFormElement = document.querySelector("#search-form");
     searchFormElement.addEventListener("submit",handleSearchSubmit);
     
+
+
+    
+ 
+ 
