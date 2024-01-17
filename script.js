@@ -6,10 +6,14 @@ function updateWeather(response) {
   cityElement.innerHTML = response.data.name;
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
+  let timeElement = document.querySelector("#time");
   let windSpeedElement = document.querySelector("#wind-speed");
+  let date = new Date(response.data.time * 1000);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = `${response.data.main.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+  timeElement.innerHTML = `${date.getHours()} : ${date.getMinutes()}`;
+
 }
 
 function searchCity(city) {
