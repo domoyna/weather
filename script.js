@@ -29,6 +29,10 @@ let days = [
   "Saturday"]
 ]
 let day = days[getDay()];
+
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
   return `${day} ${hours} : ${minutes}`;
 }
 function searchCity(city) {
