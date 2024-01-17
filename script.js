@@ -1,16 +1,15 @@
 function updateWeather(response) {
-     console.log(response.data);
- let temperatureElement = document.querySelector("#current-temperature");
+  console.log(response.data);
+  let temperatureElement = document.querySelector("#current-temperature");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#current-city");
   cityElement.innerHTML = response.data.name;
-let temperature = response.data.temperature.current;
- let descriptionElement = document.querySelector("#description");
- let humidityElement = document.querySelector("#humidity");
- let windSpeedElement = document.querySelector("#wind-speed");
-descriptionElement.innerHTML=response.data.condition.description ;
-humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-windSpeedElement.innerHTML = `${response.data.wind.speed}km/h';
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windSpeedElement = document.querySelector("#wind-speed");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = `${response.data.main.humidity}%`;
+  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
 }
 
 function searchCity(city) {
@@ -19,19 +18,14 @@ function searchCity(city) {
   console.log(apiUrl);
   axios.get(apiUrl).then(updateWeather);
 }
- 
-function handleSearchSubmit (event) {
-    event.preventDefault ();
-    let searchInput = document.querySelector("#search-form-input");
-    searchCity(searchInput.value);
-   
-   
-    }
-    let searchFormElement = document.querySelector("#search-form");
-    searchFormElement.addEventListener("submit",handleSearchSubmit);
-    
+
+function handleSearchSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-form-input");
+  searchCity(searchInput.value);
 
 
-    
- 
- 
+}
+let searchFormElement = document.querySelector("#search-form");
+searchFormElement.addEventListener("submit", handleSearchSubmit);
+
