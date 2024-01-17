@@ -12,10 +12,10 @@ function updateWeather(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = `${response.data.main.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
-  timeElement.innerHTML = `${date.getDay(} ${date.getHours()} : ${date.getMinutes()}`;
+  timeElement.innerHTML =  formatDate (date);
 
 }
-function formateDate (date) {
+function formatDate (date) {
   
   let minutes = date.getMinutes;
   let hours = date.getHours;
