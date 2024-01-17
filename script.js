@@ -27,7 +27,7 @@ let days = [
   "Thursday",
   "Friday",
   "Saturday"]
-]
+}
 let day = days[getDay()];
 
 if (minutes < 10) {
