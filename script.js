@@ -8,31 +8,30 @@ function updateWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let timeElement = document.querySelector("#time");
   let windSpeedElement = document.querySelector("#wind-speed");
-  let date = new Date(response.data.time * 1000);
+  let date = new Date(response.data.dt * 1000);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = `${response.data.main.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
-  timeElement.innerHTML =  formatDate (date);
+  timeElement.innerHTML = formatDate(date);
 
 }
-function formatDate (date) {
-  
-  let minutes = date.getMinutes;
-  let hours = date.getHours;
-let days = [
-  "Sunday",
-   "Monday",
-   "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"]
-}
-let day = days[getDay()];
+function formatDate(date) {
 
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"]
+  let day = days[date.getDay()];
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
   return `${day} ${hours} : ${minutes}`;
 }
 function searchCity(city) {
@@ -52,4 +51,3 @@ function handleSearchSubmit(event) {
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
-

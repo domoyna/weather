@@ -47,9 +47,10 @@ a {
     justify-content: space-around;
     padding: 30px 0;
     margin-right: 20px;
+    object-fit: contain;
+    }
 
 
-}
 main {
     padding: 30px  0;
 }
