@@ -18,7 +18,7 @@ function updateWeather(response) {
   humidityElement.innerHTML = `${response.data.main.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   timeElement.innerHTML = formatDate(date);
-  searchCity("Paris");
+  
 
 }
 function formatDate(date) {
