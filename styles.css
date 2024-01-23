@@ -54,7 +54,7 @@ a {
 
 main {
     padding: 30px  0;
-    margin-top: 16px;
+   
 }
 
 .weather-app-data {
@@ -77,6 +77,7 @@ footer {
     display: flex;
         justify-content: space-between;
         margin-right: 20px;
+        margin-top: 40px;
     
 
 }
@@ -100,7 +101,7 @@ p {
 .emoji {
     
         font-size: 28px;
-        margin-top: 40px;
+       
 }
 .weather-app-city {
     font-size: 50px;
