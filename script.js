@@ -10,9 +10,13 @@ function updateWeather(response) {
   let windSpeedElement = document.querySelector("#wind-speed");
   let date = new Date(response.data.dt * 1000);
   let emoji =document.querySelector("#emoji");
-  let emojiElement = `<img src="https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png" class="weather-app-icon" />`
+ 
+  let emojiElement = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`
 
   emoji.innerHTML = emojiElement
+  
+
+  
             
           
   descriptionElement.innerHTML = response.data.weather[0].description;
