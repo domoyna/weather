@@ -9,7 +9,7 @@ background: linear-gradient(109.6deg, rgb(253, 223, 168) 11.2%, rgb(246, 165, 25
     padding: 0, 0, 30px 0,08;
 }
 .weather-app {
-    background: rgb(60, 188, 234);
+    background: rgb(156, 234, 60);
     max-width: 600px;
     margin: 45px auto;
     box-shadow: 0 30px 50px rgba(65,50,100, 0,08);
