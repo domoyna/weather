@@ -11,6 +11,7 @@ function updateWeather(response) {
   let date = new Date(response.data.dt * 1000);
   let emoji =document.querySelector("#emoji");
   let emojiElement = `<img src="https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png" class="weather-app-icon" />`
+
   emoji.innerHTML = emojiElement
             
           
@@ -58,4 +59,4 @@ function handleSearchSubmit(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
-searchCity("Paris");
+searchCity("Antananarivo");
