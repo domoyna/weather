@@ -76,6 +76,7 @@ footer {
     display: flex;
         justify-content: space-between;
         margin-right: 20px;
+    margin-top: 16px;
 
 }
 .data {
@@ -87,7 +88,7 @@ footer {
 }
 
 .unit {
-    margin-top: 16px;
+
     font-size: 28px;
     
 }
@@ -96,7 +97,7 @@ p {
 }
 
 .emoji {
-    margin-top: 16px;
+    
         font-size: 28px;
 }
 .weather-app-city {
