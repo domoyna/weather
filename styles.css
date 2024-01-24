@@ -1,7 +1,7 @@
 body {
        
        font-family: 'Oswald', sans-serif;
-background: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+background: linear-gradient(to right, rgb(238, 156, 167), rgb(255, 221, 225));
      
 }
 .header {
