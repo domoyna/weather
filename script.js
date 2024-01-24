@@ -1,22 +1,22 @@
 function updateWeather(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector("#current-temperature");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   let cityElement = document.querySelector("#current-city");
-  cityElement.innerHTML = response.data.name;
+  cityElement.innerHTML = response.data.city;
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let timeElement = document.querySelector("#time");
   let windSpeedElement = document.querySelector("#wind-speed");
-  let date = new Date(response.data.dt * 1000);
+  let date = new Date(response.data.time * 1000);
   let emoji = document.querySelector("#emoji");
   
-let emojiElement = `<img src="https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png" class="weather-app-icon" />`
+let emojiElement = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`
  
   emoji.innerHTML = emojiElement;
 
-  descriptionElement.innerHTML = response.data.weather[0].description;
-  humidityElement.innerHTML = `${response.data.main.humidity}%`;
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   timeElement.innerHTML = formatDate(date);
 }
@@ -40,10 +40,10 @@ function formatDate(date) {
   return `${day} ${hours} : ${minutes}`;
 }
 function searchCity(city) {
-  let apiKey = "515c9ddbeb3cda9061acfab71031839e";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(
+  let apiKey = "fbef01f4et1b02o0d25c27210a43ef3f";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${encodeURIComponent(
     city
-  )}&appid=${apiKey}&units=metric`;
+  )}&key=${apiKey}&units=metric`;
   console.log(apiUrl);
   axios.get(apiUrl).then(updateWeather);
 }
